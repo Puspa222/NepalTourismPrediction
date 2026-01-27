@@ -1,1 +1,0 @@
-# Encode the categorical variable month(jan, feb...) into column with value 0 or 1
