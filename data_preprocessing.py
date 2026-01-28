@@ -6,7 +6,7 @@ data['Date'] = pd.to_datetime(data['Year'].astype(str) + '-' + data['Month'], fo
 
 data_sorted = data.sort_values('Date')
 
-data_sorted = data_sorted[['Year', 'Month', 'Value']]
+data_sorted = data_sorted[['Date', 'Value']]
 
 
 data_sorted.to_csv("dataset/date_sorted_tourists.csv", index=False)
