@@ -1,12 +1,21 @@
 import pandas as pd
 
-data = pd.read_csv("dataset/initial_data.csv")
+# Load original dataset
+file_path = "dataset/date_sorted_tourists.csv"
+df = pd.read_csv(file_path)
+df['Date'] = pd.to_datetime(df['Date'])
+df = df.sort_values('Date').reset_index(drop=True)
 
-data['Date'] = pd.to_datetime(data['Year'].astype(str) + '-' + data['Month'], format='%Y-%b')
+# Add Global_Event feature
+df['Global_Event'] = 0
+df.loc[(df['Date'] >= '2015-04-01') & (df['Date'] <= '2015-05-31'), 'Global_Event'] = 1
+df.loc[(df['Date'] >= '2020-01-01') & (df['Date'] <= '2021-12-31'), 'Global_Event'] = 2
 
-data_sorted = data.sort_values('Date')
+# Fill missing values if any
+df['Value'].interpolate(method='linear', inplace=True)
 
-data_sorted = data_sorted[['Date', 'Value']]
+# Save the new dataset
+output_file = "dataset/tourists_with_global_event.csv"
+df.to_csv(output_file, index=False)
 
-
-data_sorted.to_csv("dataset/date_sorted_tourists.csv", index=False)
+print(f"File saved successfully as {output_file}")
