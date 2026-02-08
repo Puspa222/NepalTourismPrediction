@@ -3,7 +3,7 @@
 Dep. Variable:               tourists   No. Observations:                  348
 Model:                 ARIMA(2, 1, 2)   Log Likelihood               -3758.417
 Date:                Sun, 08 Feb 2026   AIC                           7526.834
-Time:                        14:15:51   BIC                           7546.081
+Time:                        14:24:29   BIC                           7546.081
 Sample:                    01-01-1995   HQIC                          7534.498
                          - 12-01-2023                                         
 Covariance Type:                  opg                                         
