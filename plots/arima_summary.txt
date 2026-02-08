@@ -1,0 +1,27 @@
+                               SARIMAX Results                                
+==============================================================================
+Dep. Variable:               tourists   No. Observations:                  348
+Model:                 ARIMA(2, 1, 2)   Log Likelihood               -3758.417
+Date:                Sun, 08 Feb 2026   AIC                           7526.834
+Time:                        14:15:51   BIC                           7546.081
+Sample:                    01-01-1995   HQIC                          7534.498
+                         - 12-01-2023                                         
+Covariance Type:                  opg                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          1.0017      0.009    115.450      0.000       0.985       1.019
+ar.L2         -0.9937      0.009   -110.648      0.000      -1.011      -0.976
+ma.L1         -1.0175      0.030    -33.560      0.000      -1.077      -0.958
+ma.L2          0.9489      0.028     33.895      0.000       0.894       1.004
+sigma2      1.776e+08   2.36e-11   7.54e+18      0.000    1.78e+08    1.78e+08
+===================================================================================
+Ljung-Box (L1) (Q):                   4.03   Jarque-Bera (JB):               428.46
+Prob(Q):                              0.04   Prob(JB):                         0.00
+Heteroskedasticity (H):               5.73   Skew:                            -0.35
+Prob(H) (two-sided):                  0.00   Kurtosis:                         8.40
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+[2] Covariance matrix is singular or near-singular, with condition number 1.41e+34. Standard errors may be unstable.
